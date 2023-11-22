@@ -1,0 +1,16 @@
+
+<div *ngIf="connection">
+ 
+    <h2>{{connection.name | uppercase}} Details</h2>
+    <div>id: {{connection.id}}</div>
+    <div>
+        <label for="connection-name">Connection name: </label>
+        <input id="connection-name" [(ngModel)]="connection.name" placeholder="name">   
+    </div>
+
+    <div>
+        <label for="connection-connString">Connection string: </label>
+        <input id="connection-connString" [(ngModel)]="connection.connString" placeholder="connection string">   
+    </div>
+
+</div>

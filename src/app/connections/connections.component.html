@@ -1,0 +1,15 @@
+
+<h2>My connections</h2>
+
+<ul class="connections">
+    <li *ngFor="let connection of connections">
+        <button [class.selected]="connection===selectedConnection"
+                type="button" (click)="onSelect(connection)">
+            <span class="badge">{{connection.id}}</span>
+            <span class="name">{{connection.name}}</span>
+            <span class="connString">{{connection.connString}}</span>
+        </button>
+    </li>
+</ul>
+
+<app-connection-detail [connection]="selectedConnection"></app-connection-detail>
